@@ -22,6 +22,9 @@
 #include <SWIG_CGAL/Kernel/Ray_2.h>
 #include <SWIG_CGAL/Kernel/Ray_3.h>
 #include <SWIG_CGAL/Kernel/Polygon_2.h>
+#include <SWIG_CGAL/Kernel/Tetrahedron_3.h>
+#include <SWIG_CGAL/Kernel/Iso_cuboid_3.h>
+#include <SWIG_CGAL/Kernel/Sphere_3.h>
 
 
 #include <CGAL/Object.h>
@@ -60,6 +63,9 @@ public:
   SWIG_CGAL_DECLARE_FCT_IS_AND_GET(Plane_3)
   SWIG_CGAL_DECLARE_FCT_IS_AND_GET(Ray_2)
   SWIG_CGAL_DECLARE_FCT_IS_AND_GET(Ray_3)
+  SWIG_CGAL_DECLARE_FCT_IS_AND_GET(Tetrahedron_3)
+  SWIG_CGAL_DECLARE_FCT_IS_AND_GET(Iso_cuboid_3)
+  SWIG_CGAL_DECLARE_FCT_IS_AND_GET(Sphere_3)
 // special cases
   bool is_Polygon_2(){
     return data.is<std::vector<Point_2::cpp_base> >();
