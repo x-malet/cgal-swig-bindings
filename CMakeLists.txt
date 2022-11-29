@@ -150,7 +150,12 @@ if ( CGAL_FOUND AND ${CGAL_MAJOR_VERSION} GREATER 4 )
     endif()
     if (BUILD_JAVA)
       SET (JAVA_OUTDIR_PREFIX "${CMAKE_CURRENT_BINARY_DIR}/build-java/" CACHE PATH "Java specific files output directory prefix: Java files in CGAL directory, libraries in lib directory.")
-      SET (JAVALIBPATH "${JAVA_OUTDIR_PREFIX}/lib")
+      if (NOT (JAVALIBPATH))
+            SET (JAVALIBPATH "${JAVA_OUTDIR_PREFIX}/lib")
+       else()
+            set(JAVALIBPATH={$JAVALIBPATH})
+       endif()
+
       message(STATUS "Found JNI: JNI include dirs ${JAVA_INCLUDE_PATH} ${JAVA_INCLUDE_PATH2}.")
       message(STATUS "CGAL-SWIG Java libraries and files will be respectively written in ${JAVALIBPATH} and ${JAVA_OUTDIR_PREFIX}/CGAL.")
 
@@ -182,6 +187,7 @@ if ( CGAL_FOUND AND ${CGAL_MAJOR_VERSION} GREATER 4 )
 
         # tests load files from source dir, eg: ../data/oni.xyz
         file (COPY examples/data DESTINATION ${JAVA_OUTDIR_PREFIX}/..)
+        file (COPY ${JAVA_OUTDIR_PREFIX}/lib/. DESTINATION ${JAVALIBPATH})
 
       endif ()
     endif()
