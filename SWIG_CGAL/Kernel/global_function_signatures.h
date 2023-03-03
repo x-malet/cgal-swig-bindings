@@ -10,6 +10,10 @@ SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Point_
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Point_3,Segment_3)
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Point_3,Line_3)
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Point_3,Ray_3)
+SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Point_3,Tetrahedron_3)
+SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Point_3,Triangle_3)
+
+
 
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Plane_3,Point_3)
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Plane_3,Segment_3)
@@ -33,6 +37,10 @@ SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Ray_3,
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Ray_3,Segment_3)
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Ray_3,Line_3)
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Ray_3,Ray_3)
+
+SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Triangle_3,Triangle_3)
+
+
 
 //dimension 2
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(double,squared_distance,Point_2,Point_2)
@@ -193,6 +201,9 @@ SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Bbox_3,Trian
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Bbox_3,Bbox_3)
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Bbox_3,Iso_cuboid_3)
 
+SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Bbox_3,Plane_3)
+
+
 
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Point_3,Bbox_3)
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Line_3,Bbox_3)
@@ -200,6 +211,8 @@ SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Ray_3,Bbox_3
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Segment_3,Bbox_3)
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Triangle_3,Bbox_3)
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Iso_cuboid_3,Bbox_3)
+SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Plane_3, Bbox_3)
+
 
 
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_CALL_GF_2(bool,do_intersect,Sphere_3,Point_3)
@@ -232,6 +245,8 @@ SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_AND_FILTER_CALL_GF_2(Object,intersection
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_AND_FILTER_CALL_GF_2(Object,intersection,Plane_3,Tetrahedron_3)
 
 //MISSING IMPL IN CGAL SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_AND_FILTER_CALL_GF_2(Object,intersection,Plane_3,Iso_cuboid_3)
+
+SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_AND_FILTER_CALL_GF_2(Object,intersection,Plane_3,Iso_cuboid_3)
 
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_AND_FILTER_CALL_GF_2(Object,intersection,Segment_3,Plane_3)
 SWIG_CGAL_KERNEL_DECL SWIG_CGAL_FORWARD_AND_FILTER_CALL_GF_2(Object,intersection,Segment_3,Segment_3)

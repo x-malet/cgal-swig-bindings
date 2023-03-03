@@ -31,6 +31,12 @@ public:
   #endif
 //Creation
   Iso_cuboid_3(Point_3& p,Point_3& q):data(p.get_data(),q.get_data()){}
+    Iso_cuboid_3(Bbox_3& p):data(p.get_data().xmin(),
+    p.get_data().ymin(),p.get_data().zmin(),
+    p.get_data().xmax(),
+    p.get_data().ymax(),
+    p.get_data().zmax(),1){}
+
   Iso_cuboid_3(Point_3& p,Point_3& q,int i):data(p.get_data(),q.get_data(),i){}
   Iso_cuboid_3(Point_3& left, Point_3& right, Point_3& bottom, Point_3& top, Point_3& far, Point_3& close)
     :data(left.get_data(),right.get_data(),bottom.get_data(),top.get_data(),far.get_data(),close.get_data()){}
