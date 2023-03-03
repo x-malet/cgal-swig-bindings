@@ -187,7 +187,7 @@ if ( CGAL_FOUND AND ${CGAL_MAJOR_VERSION} GREATER 4 )
 
         # tests load files from source dir, eg: ../data/oni.xyz
         file (COPY examples/data DESTINATION ${JAVA_OUTDIR_PREFIX}/..)
-        file (COPY ${JAVA_OUTDIR_PREFIX}/lib/. DESTINATION ${JAVALIBPATH})
+        # file (COPY ${JAVA_OUTDIR_PREFIX}/lib/. DESTINATION ${JAVALIBPATH})
 
       endif ()
     endif()
